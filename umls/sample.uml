@@ -1,0 +1,16 @@
+@startuml
+
+skinparam backgroundColor white
+skinparam handwritten     False 
+
+actor Promoter
+actor Entrant
+
+Promoter -> (Create Event)
+Promoter -> (Attend Event)
+Promoter -> (PPP Event)
+Entrant  -> (Find Event)
+(Attend Event) <- Entrant
+(Attend Event) <.. (Create Member) : <<include>>
+
+@enduml
